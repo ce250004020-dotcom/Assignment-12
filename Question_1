@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    float length;
+    float breadth;
+
+public:
+    Rectangle() {
+        length = 1;
+        breadth = 1;
+    }
+
+    Rectangle(float l, float b) {
+        length = l;
+        breadth = b;
+    }
+
+    void displayArea() {
+        float area = length * breadth;
+        cout << "Length: " << length << ", Breadth: " << breadth 
+             << " → Area: " << area << endl;
+    }
+};
+
+int main() {
+    Rectangle rect1;
+    cout << "Using default constructor:" << endl;
+    rect1.displayArea();
+
+    Rectangle rect2(5.5, 3.2);
+    cout << "\nUsing parameterized constructor:" << endl;
+    rect2.displayArea();
+
+    return 0;
+}
